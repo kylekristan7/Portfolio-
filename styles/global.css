@@ -1,10 +1,100 @@
-/* remove default browser spacing*/
+/* Reset and base */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*title text style*/
-/* the font-family 'JetBrains Mono', has been linked
- * and is available for your use
- * */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Nav */
+header {
+  background-color: #111;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6f61;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  animation: fadeIn 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+/* Sections */
+section {
+  margin: 3rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
